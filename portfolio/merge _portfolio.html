@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+}
+:root{
+    --color-white:#ffffff;
+    --color-light:#828282;
+    --color-primary:#12e12e;
+    --color-dark:#212120;
+    --color-border:#7e686895;
+    --color-bg:#171717;
+
+}
+body{
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+  h1{
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+    line-height: 30px;
+    margin: 1rem 0;
+    
+    
+ }
+h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 30px;
+    color:var(--color-border);
+
+}
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 31px;
+    color:var(--color-primary);
+
+}
+h5{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    color:white;
+
+}
+p{
+    color:var(--color-white);
+    font-size: 17px;
+    line-height: 23px;
+}
+.btn{
+    
+    display: inline-block;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .4s ease;
+    color:#ffff;
+    border-radius: 6px;
+}
+.btn:hover{
+    background: white;
+    color: var(--color-bg);
+    border-color:transparent ;
+}
+.btn-primary{
+    background: var(--color-primary);
+    border-color: transparent;
+    
+}
+.container{
+    max-width: 160px;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+nav{
+    height: 5rem;
+    width: 100%;
+    position:fixed ;
+    top:0;
+    right: 0;
+    
+}
+.nav-container  {
+  
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 950px;
+    margin-inline-end:100px;
+    padding-inline-start: 40px;
+    
+}
+.logo h2{
+    color: white;
+    font-size: 35px;
+}
+.nav-container ul{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.nav-container ul li a{
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 400;
+    transition: .4s ease;
+    
+}
+.nav-container ul li a:hover{
+    color:var(--color-primary);
+}
+span{
+     
+    color: var(--color-primary);
+    text-shadow:0 0 10px blueviolet;
+    
+}
+header{
+    margin-top: 190px;
+    
+
+    
+}
+
+
+.header-container{
+    display: grid;
+    grid-template-columns: 548% 120%;
+    align-items: center;
+    margin-left: 10%;
+}
+img{
+    width: 170%;
+    display: block;
+    
+    
+}
+.header-container p{
+    width: 90%;
+    margin: 2rem 0 1rem;
+    font-style:normal;
+}
+.name{
+    width: 50px;
+    font-size: 60px;
+    font-weight: 500;
+}
+.header-container h5{
+    margin: 1rem 0;
+    color: var(--color-light);
+}
+.header-action-aria{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#About{
+    padding-top:70px;
+}
+section>h1{
+    text-align: center;
+    margin-bottom: 44px;
+    margin-top: 158px;
+}
+.about-container p{
+    
+    margin: 4px auto;
+    width: 62%;
+    position: absolute;
+    margin-left: -26%;
+    font-style:normal;
+    font-weight: 55px;
+    text-align: center;
+    font-size: 25px;
+
+    
+}
+    
+    
+
+.about-content{
+margin-top: 600%;
+display: grid;
+margin: 280px 18%;
+grid-template-columns: repeat(4,1fr);
+justify-content: center;
+align-items: center;
+
+
+
+}
+.about-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+    text-align: center;
+}
+.about-article img{
+    width: 62px;
+}
+#Services{
+    padding-top: 8px;
+    
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:60px;
+    margin-top: 100px;
+   justify-content: center;
+}
+.services-article{
+    background: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    border: 4px solid transparent;
+}
+.services-article:hover{
+    border-color: var(--color-primary);
+}
+.services-article img{
+    width: 40px;
+}
+.services-article p{
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+
+#skills{
+    padding-top: -1px;
+    
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:60px;
+    margin-top: 100px;
+   justify-content: center;
+   text-align: center;
+
+}
+.skill-article{
+    background: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding:16px 90px;
+    border-radius: 14px;
+    
+    border: 4px solid transparent;
+}
+.skill-article:hover{
+    border-color: var(--color-primary);
+    
+}
+
+
+
+#Contact{
+    padding-top: 120px;
+}
+.contatact-container{
+    margin-top: 80px;
+}
+form{
+    width: 60%;
+    margin: 0 auto;
+    position: absolute;
+    margin-left: -25%;
+}
+.form-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px
+}
+form input{
+    padding: 10px;
+    background: transparent;
+    margin-bottom: 30px;
+    color: var(--color-light);
+    border: none;
+    box-shadow: 0 1px 0 0 var(--color-border);
+    transition: .4s ease;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+}
+form input:focus{
+    border-bottom: 1px solid blueviolet;
+    color:var(--color-primary);
+    box-shadow: none;
+}
+.form-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.form-bottom textarea{
+    width: 100%;
+    padding: 9px;
+    height: 100px;
+    background: transparent;
+    resize: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 17px;
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+}
+.form-bottom textarea :focus{
+border-bottom: 1px solid blueviolet;
+}
+
+footer{
+    margin-top:500px ;
+    margin-bottom: 40px ;
+    text-align: center;
+    color:var(--color-border);
+}
+.naWinScroll{
+    background: var(--color-dark);
+    box-shadow: 0 0.1rem rgba(0,0,0,0,7);
+}
+</style>
+<title>Portfolio</title>
+    
+    
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="" class="logo">
+                <h2>TANMOY<span> PAL</span></h2>
+            </a>
+            <ul>
+                <li><a href="#About">About </a></li>
+                <li><a href="#Services">Project</a></li>
+				<li><a href="#skills">Skills</a></li>
+                <li><a href="#Contact">Contact </a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-container container">
+            <div class="header-left">
+                <h1>
+                    Hello,
+
+                    <p class="name"> I am <span>Tanmoy</span></p>
+                </h1>
+                <p style="text-align:justify;">As a fresh graduate in IT industry, I bring a strong educational background and a genuine passion for IT field.I am a quick learner, eager to apply my theoretical knowledge to practical challenges.<br>Proficient in HTML,CSS, Javascript and React.js with
+                    experience in windows and linux<br> environmenst
+                    committed to deliveing hight-quality and driving organzation growth.
+                </p>
+
+                <h5>Frontend Developer</h5>
+                <br>
+                <div class="header-action-aria">
+                    <a href="cv.pdf" download class="btn btn-primary">Download CV</a>
+                    <a href="" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="img.jpg" alt="">
+            </div>
+    </header>
+
+    <section id="About">
+        <h1>ABOUT</h1>
+        <div class="container about-container">
+            <p>I'm a diligent <span>Frontend Developer </span>, passionately committed to refining my <span> CSS, HTML,
+                </span> and <span> JS </span> skills. My
+                relentless dedication drives me to continually learn and adapt, staying at the forefront of <span>web
+                    development</span> trends. My goal is to create captivating, responsive, and user-friendly web
+                interfaces.</p>
+        </div>
+        <div class="about-content">
+            <article class="about-article">
+                <img src="man.png" alt="">
+                <h5>FULL NAME</h5>
+                <p>Tanmoy Pal</p>
+
+            </article>
+            <article class="about-article">
+                <img src="email.png" alt="">
+                <h5>EMAIL</h5>
+                <p>tpal43961@gmail.com </p>
+
+            </article>
+            <article class="about-article">
+                <img src="linkedin.png" alt="">
+                <h5>Linkedin</h5>
+                <p>https://www.linkedin.com/in/tanmoy-pal-233547264/</p>
+
+            </article>
+            <article class="about-article">
+                <img src="telephone-call.png" alt="">
+                <h5>PHONE </h5>
+                <p>+91 6295315451</p>
+            </article>
+        </div>
+    </section>
+    <section id="Services">
+        <h1>PROJECTS</h1>
+
+        <div class="container services-container">
+            <article class="services-article">
+                <h2><span>Ecommerce Website</span></h2>
+                <p style="text-align:justify;">Designed and developed a Web page with back-end on SQL in database & front-end using HTML, CSS, js, Bootstrap.<br>User can search his/her favorite items, add to cart and buy.  </p>
+            </article>
+            <article class="services-article">
+                <h2><span>Book Store Management system</span></h2>
+                <p style="text-align:justify;">Designed and developed a Web page with back-end on SQL in database & front-end using HTML, CSS, js, Bootstrap.<br>User can find books of his/her choice, add to cart and buy.  </p>
+
+				</article>
+            
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1> My Skills</h1>
+        <div class="container skills-container">
+            <article class="skill-article">
+
+                <h4>HTML </h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>CSS</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>Javascript</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>MySql</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>Python</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>WebDesign</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>Java</h4>
+            </article>
+            <article class="skill-article">
+
+                <h4>C</h4>
+            </article>
+
+        </div>
+    </section>
+	
+    <section id="Contact">
+        <h1> <span>Get</span> In Touch</h1>
+        <div class="contatact-container container">
+            <form>
+                <div class="form-top">
+                    <input type="text" placeholder="  First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="number" placeholder="Phone Number" required>
+
+                </div>
+                <div class="form-bottom">
+                    <textarea name="message" placeholder="message"></textarea>
+                    <button type="submit" class="btn btn-primary">Sumbit Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+		<p>&copy; 2024 All Right Reserve, created by Tanmoy  </p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<style>
+			
+			body{padding-left:35%;padding-top:10%;}
+			.calculate{width:350;padding:8%;background-color:#01B6FF;border:1px solid #ccc;border-radius:18px;}
+			.display{height:8%;width:100%;background-color:white;margin-bottom:15px;text-align:right;border: 1px solid black;border-radius:5px;font-size:25;}
+			.buttons{display:grid;grid-gap:5px;grid-template-columns:repeat(4,1fr);}
+			button{width:100%;hight:5%;color:white;background-color:#0701FF;font-size:18;cursor:pointer;}
+			button:hover{background-color:#0283F8;}
+		</style>
+		<script>
+			let dv = '0';
+			let operator = '';
+			let v1 = 0;
+
+			function clear_display() {
+				dv = '0';
+				ud();
+			}
+
+			function append(val) {
+				if (dv === '0') {
+					dv = val;
+				} else {
+					dv += val;
+				}
+				ud();
+			}
+
+			function operation(op) {
+				operator = op;
+				v1 = parseFloat(dv);
+				dv = '0';
+				ud();
+			}
+
+			function calculate() {
+				const v2 = parseFloat(dv);
+				let result;
+				switch (operator) {
+					case '+':
+						result = v1 + v2;
+						break;
+					case '-':
+						result = v1 - v2;
+						break;
+					case '*':
+						result = v1 * v2;
+						break;
+					case '/':
+						result = v1 / v2;
+						break;
+					default:
+						result = operand2;
+				}
+				dv = result.toString();
+				ud();
+			}
+
+			function ud() {
+				document.getElementById('display').innerText = dv;
+			}
+
+		</script
+	</head>
+	<body>
+		<div class="calculate">
+			<div class="display" id="display">0</div>
+			<div class="buttons">
+				<button onclick="clear_display()">C</button>
+				<button onclick="append('7')">7</button>
+	            <button onclick="append('8')">8</button>
+				<button onclick="append('9')">9</button>
+				<button onclick="operation('+')">+</button>
+				<button onclick="append('4')">4</button>
+				<button onclick="append('5')">5</button>
+				<button onclick="append('6')">6</button>
+				<button onclick="operation('-')">-</button>
+				<button onclick="append('1')">1</button>
+				<button onclick="append('2')">2</button>
+				<button onclick="append('3')">3</button>
+				<button onclick="operation('*')">*</button>
+				<button onclick="append('0')">0</button>
+				<button onclick="append('.')">.</button>
+				<button onclick="calculate()">=</button>
+				<button onclick="operation('/')">/</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		
+	</body>
+</html>
